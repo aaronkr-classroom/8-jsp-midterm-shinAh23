@@ -1,26 +1,27 @@
 <!-- UT-NodeJS 중간고사 -->
+<%@ page contentType="text/html; charset =UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UT-NodeJS 중간고사 | Contact</title>
+    <title>Student Registration | Contact</title>
 
     <!-- 학생 이름과 학번 -->
-    <meta name="author" content="???" />
-    <meta name="description" content="???" />
+    <meta name="author" content="my first name" />
+    <meta name="description" content="my last name" />
 
-    <!-- CSS 파일에 대한 link테그를 수정하십시오 -->
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../public/css/style.css" />
+    <!-- CSS 파일에 대한 link태그를 수정하십시오 -->
+    <link href="./public/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/css/style.css" />
     <link
       rel="stylesheet"
       media="(max-width: 768px)"
-      href="../public/css/style.small.css"
+      href="./public/css/style.small.css"
     />
 
     <!-- JS 파일에 대한 script테그를 수정하십시오 -->
-    <script defer src="../public/js/functions.js"></script>
+    <script defer src="./public/js/functions.js"></script>
   </head>
 
   <body>
@@ -83,13 +84,57 @@
                 <label for="floatingName">Name</label>
               </div>
 
-              <!--
-                #################
-              
-                여기에 나머진 폼 코드를 작성하세요
-
-                #################
-              -->
+	<form
+		class="p-4 p-md-5 border rounded-3 bg-light"
+		action="/submit_registration" <!-- 여기에 서버 경로 설정 -->
+		method="post">
+	<div class="form-floating mb-3">
+		<input
+		type="text"
+		class="form-control"
+		id="floatingName"
+		placeholder="Name"
+		name="name"
+		required />
+		<label for="floatingName">Name</label>
+	</div>
+  <div class="form-floating mb-3">
+    <input
+      type="email"
+      class="form-control"
+      id="floatingEmail"
+      placeholder="Email"
+      name="email"
+      required
+    />
+    <label for="floatingEmail">Email</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="tel"
+      class="form-control"
+      id="floatingPhone"
+      placeholder="Phone"
+      name="phone"
+    />
+    <label for="floatingPhone">Phone</label>
+  </div>
+  <div class="form-floating mb-3">
+    <textarea
+      class="form-control"
+      placeholder="Leave a message here"
+      id="floatingMessage"
+      style="height: 100px"
+      name="message"
+    ></textarea>
+    <label for="floatingMessage">Message</label>
+  </div>
+  
+  <button class="w-100 btn btn-lg btn-primary ut-red" type="submit">
+    Submit
+  </button>
+  <hr />
+</form>
               
               <button class="w-100 btn btn-lg btn-primary ut-red" type="submit">
                 Submit
@@ -104,12 +149,12 @@
 
     <!-- FOOTER -->
     <footer class="text-center fixed-bottom bg-dark text-bg-dark pt-3">
-      <p class="ut-red">
-        <span class="text-white">&copy; 2023</span> [[[ 학생의 이름과 학번 ]]]
-      </p>
-    </footer>
+	<p class="ut-red">
+	<span class="text-white">&copy; 2023</span> 홍길동 - 20231773
+    </p>
+	</footer>
 
     <!-- Bootstrap의 JS -->
-    <script src="../public/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

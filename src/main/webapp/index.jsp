@@ -1,26 +1,32 @@
 <!-- UT-NodeJS 중간고사 -->
+<%@ page contentType="text/html; charset =UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>UT-NodeJS 중간고사</title>
+    <title>Student Registration</title>
 
     <!-- 학생 이름과 학번 -->
-    <meta name="author" content="???" />
-    <meta name="description" content="???" />
+    <meta name="author" content="my first name" />
+    <meta name="description" content="my last name" />
 
     <!-- CSS 파일에 대한 link테그를 수정하십시오 -->
-    <link href="../public/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../public/css/style.css" />
+    <link href="./public/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./public/css/style.css" />
     <link
       rel="stylesheet"
       media="(max-width: 768px)"
-      href="../public/css/style.small.css"
+      href="./public/css/style.small.css"
     />
 
     <!-- JS 파일에 대한 script테그를 수정하십시오 -->
-    <script defer src="../public/js/functions.js"></script>
+    <script defer src="./public/js/functions.js"></script>
+    <script> 
+      // 외부 파일에 정의된 변수를 사용하기 위해 다시 정의 
+	var localVariable = externalVariable; 
+	console.log(localVariable); // "Hello, world!" 
+	</script>
   </head>
 
   <body id="index">
@@ -71,6 +77,6 @@
     </footer>
 
     <!-- Bootstrap의 JS -->
-    <script src="../public/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
